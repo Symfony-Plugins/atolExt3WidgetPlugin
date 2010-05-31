@@ -1,0 +1,144 @@
+#atolExt3WidgetPlugin
+
+The atolExt3WidgetPluginis a symfony plugin that provides Ext JS component and forms by generating JSON description and using "xtype".
+
+All "Basic" component aren't linked with Doctrine or Propel, but "High Level" component (like Database combobox) are linked with Doctrine.
+Installation
+
+  * Install the plugin
+
+        $ symfony plugin-install http://plugins.symfony-project.com/atolExt3WidgetPlugin
+
+  * Alternatively, if you don't have PEAR installed, you can download the latest package attached to this plugin's wiki page and extract it under your project's plugins/ directory
+
+  * Clear the cache to enable the auto-loading to find the new class
+
+      symfony cc
+
+# Tutorial
+
+## Server-side
+### Forms
+
+A form inherit from PluginExt3FormDoctrine, and define fields and validators.
+
+*lib/form/doctrineExt/customerExt3Form.php*
+
+    [php]
+    <?php
+    class customerExt3Form extends PluginExt3FormDoctrine
+    {
+      public function setup()
+      {
+        parent::setup();
+
+        // create combobox "type user"
+        $result = Doctrine::getTable('cutomertype')->getAll()->execute();
+        $cboCustomerType = PluginExt3DoctrineComboBox::fromResult($result, 'idtypecustomer', 'labeltypecustomer');
+        $cboCustomerType->setAttribute('fieldLabel', 'Customer Type');
+        $cboCustomerType->setAttribute('allowBlank', false);
+
+        $widgets = array (
+          'lname'=> new PluginExt3TextField( array ('allowBlank'=>false, 'fieldLabel'=>'Last name')),
+          'fname'=> new PluginExt3TextField( array ('allowBlank'=>false, 'fieldLabel'=>'First name')),
+          'login'=> new PluginExt3TextField( array ('allowBlank'=>false)),
+          'email'=> new PluginExt3EmailField(),
+          'idcustomertype'=>$cboCustomerType
+        );
+        $this->setWidgets($widgets);
+
+        $validators = array (
+          'lname'=>$this->getWidget('lname')->getValidator(),
+          'fname'=>$this->getWidget('fname')->getValidator(),
+          'login'=> $this->getWidget('login')->getValidator(),
+          'email'=>$this->getWidget('email')->getValidator(),
+          'idcustomertype'=>$this->getWidget('idcustomertype')->getValidator()
+        );
+        $this->setValidators($validators);
+
+        $this->widgetSchema->setNameFormat('customers[%s]');
+      }
+
+      public function getModelName()
+      {
+        return 'customers';
+      }
+    }
+
+### Action
+
+In action's files, use forms it's as simple as "normal" symfony's actions
+
+*actions/actions.class.php*
+
+    [php]
+    <?php
+    class sfMyAppActions extends sfActions
+    {
+      public function executeIndex(sfWebRequest $request)
+      {
+        $this->form = new customerExt3Form();
+
+        if ($request->isMethod('POST'))
+        {
+          $this->form->bind($request->getParameter($this->form->getName()));
+          if ($this->form->isValid())
+          {
+            $this->form->save();
+            $this->getUser()->setFlash('niveau', 'OK');
+            $this->getUser()->setFlash('message', 'successful');
+            $this->redirect('@home');
+          }
+          else
+          {
+            $this->getUser()->setMessage('ERROR', 'Forms contains error', $this->form->getErrorSchema());
+          }
+        }
+      }
+    }
+
+### Template
+
+The templates must write result in a variable (and this variable will be used by the javascript files)
+
+*templates/indexSuccess.php*
+
+    [php]
+    <?php
+    $formPanel = new PluginExt3FormPanel('/', $form);
+    $formPanel->setAttribute('title', "Hello World !");
+
+    // It's really recommended to create a helper which write these lines, and adapt it to your application
+    $ret = '<script type="text/javascript">';
+    $ret .= 'myApp.content = '.$formPanel->__toString();
+    $ret .= '</script>';
+
+    echo $ret;
+
+## Client-side
+
+A javascript's files is required to interprete JSON data send by actions
+
+*myApp.js*
+
+    [javascript]
+    Ext.namespace('myApp');
+
+    myApp.content = null;
+
+    myApp.app = function() {
+      return {
+        init : function() {
+          var items = Ext.ComponentMgr.create(myApp.content);
+          this.viewport = new Ext.Viewport( {
+            layout : 'fit',
+            border : false,
+            items : items
+          });
+          // This command enable component to execute a function send by symfony
+          // Use by error to invalidate component
+          this.viewport.cascade(atolExt3WidgetPlugin.cascadeFunctionToCall);
+        }
+      }
+    }();
+    Ext.onReady(myApp.app.init, myApp.app);

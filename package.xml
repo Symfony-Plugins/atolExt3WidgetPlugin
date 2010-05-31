@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>atolExt3WidgetPlugin</name>
+ <channel>pear.symfony-project.com</channel>
+ <summary>Widget to ExtJS Plugin</summary>
+ <description>This plugin allow symfony to generate ExtJS pages by using JSON format</description>
+ <lead>
+  <name>Xavier Calland</name>
+  <user>Xavier Calland</user>
+  <email>x.calland@atolcd.com</email>
+  <active>yes</active>
+ </lead>
+ <developer>
+  <name>Jean-Philippe Thevenoux</name>
+  <user>Jean-Philippe Thevenoux</user>
+  <email>jp.thevenoux@atolcd.com</email>
+  <active>yes</active>
+ </developer>
+ <developer>
+  <name>Aurélien Morlé</name>
+  <user>Aurélien Morlé</user>
+  <email>a.morle@atolcd.com</email>
+  <active>no</active>
+ </developer>
+ <developer>
+  <name>Nicolas Chevobbe</name>
+  <user>Nicolas Chevobbe</user>
+  <email>n.chevobbe@atolcd.com</email>
+  <active>yes</active>
+ </developer>
+ <developer>
+  <name>Alexis Venner</name>
+  <user>Alexis Venner</user>
+  <email>a.venner@atolcd.com</email>
+  <active>no</active>
+ </developer>
+ <date>2009-10-26</date>
+ <time>11:40:29</time>
+ <version>
+  <release>1.0.2</release>
+  <api>1.0.2</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+ <notes>
+- add PluginExt3TextArea
+- add PluginExt3MultiSelect
+- change README
+- JS refactoring &apos;PlugTMP&apos; -&gt; &apos;atolExt3WidgetPlugin&apos;
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" md5sum="167f2f0dd15526da3950e7dfcd5cace7" name="lib/form/dummyExt3FormDoctrine.php" role="data" />
+   <file baseinstalldir="/" md5sum="73c781b9ee0e7fba3b8faf1411f9b5c1" name="lib/form/PluginExt3form.php" role="data" />
+   <file baseinstalldir="/" md5sum="ef0d4fbbf0a02c8a3cc8af96ca624de9" name="lib/form/PluginExt3FormDoctrine.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="92a157a45c76e2783c8422bf588191f4" name="lib/form/PluginExt3FormPanel.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="736aa3f7a1efa8bfbe0c7d42a16a207a" name="lib/form/PluginExt3FormSchemaExt.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="ff6ff4679b2774ea8ac31771928050e7" name="lib/form/PluginExt3FormSchemaFormatterExt.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="39ba73c2cfff6e027690392ecf3b203c" name="lib/store/PluginExt3Store.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="c33cb668aabefcd5bd62c71bf16b2548" name="lib/store/doctrine/PluginExt3DoctrineStore.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="4f6b3332f27fca57db7858576222365e" name="lib/widget/PluginExt3Base.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="d9f9a28c0c16945268010ecd1f16588c" name="lib/widget/PluginExt3Button.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="912e61fe3e9bc0fbf1be932ee6075e33" name="lib/widget/PluginExt3ButtonLink.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="50feb65486e821596e266f89b99fb4cf" name="lib/widget/PluginExt3Checkbox.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="936c1d3047c5e391d18f43e62a9d62df" name="lib/widget/PluginExt3ComboBox.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="5d82b76aa1fcdd86da7a537b2ffc8e69" name="lib/widget/PluginExt3DateField.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="e86f39bf10f3c2e61fbd49566d15851a" name="lib/widget/PluginExt3DisplayField.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="5668a7d85e9c1cc3b8172b090a5499ee" name="lib/widget/PluginExt3EmailField.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="b153b5c1df24197b64e623b0ebdc19a5" name="lib/widget/PluginExt3Fieldset.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="b0c0737f5cc809f1d1b1096140617d47" name="lib/widget/PluginExt3Grid.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="e9fac8fc287128e8ccfcabaeff940400" name="lib/widget/PluginExt3Hidden.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="bb820eee4a3bd9064030de0597dc5baf" name="lib/widget/PluginExt3Label.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="48d07ce69b9acc2a36f9fcedd1fba07a" name="lib/widget/PluginExt3MenuItem.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="5f23e5327394b9882c0bfe9a6118788a" name="lib/widget/PluginExt3MultiSelect.class.php" role="php" />
+   <file baseinstalldir="/" md5sum="eaa9b1bf2a107ec9a2cb07fbda8a4d08" name="lib/widget/PluginExt3NumberField.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="d268ae514774a3a9dbe1bd3c494c878b" name="lib/widget/PluginExt3Panel.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="06673c5ffa533428bcd8c268af52ecb2" name="lib/widget/PluginExt3Password.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="0275251d6c17f233772794bc345bc583" name="lib/widget/PluginExt3TextArea.class.php" role="php" />
+   <file baseinstalldir="/" md5sum="fabf5d0d37a707f8e221392bfda56560" name="lib/widget/PluginExt3TextField.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="adbfffd0dc8f0bb266b0ea66dc286ee8" name="lib/widget/PluginExt3ToolBar.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="d04e070fc1f234cdc7edc6d2abacf87b" name="lib/widget/PluginExt3ToolBarLabel.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="c77f7b910afbd6a42f584b2a0c7ea6c7" name="lib/widget/PluginExt3Window.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="fa680040b576a193efaf0949e7fe11bd" name="lib/widget/doctrine/PluginExt3DoctrineComboBox.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="1631a8485080f06a875cfbc5a74ddb63" name="web/css/ext-all-notheme.css" role="data" />
+   <file baseinstalldir="/" md5sum="4ec907ab8898acaccb703235b8898d56" name="web/css/gridFilter.css" role="data" />
+   <file baseinstalldir="/" md5sum="b00ff45713cd2930ec8fc8e7ccd9b87c" name="web/css/xtheme-blue.css" role="data" />
+   <file baseinstalldir="/" md5sum="9208a0cf8490ac5f4a13516c477e143e" name="web/images/clear-trigger.gif" role="data" />
+   <file baseinstalldir="/" md5sum="3750c701d2ec35a45d289b9b9c1a0667" name="web/images/information.png" role="data" />
+   <file baseinstalldir="/" md5sum="0b6eedf8a89922984276951fe62509dc" name="web/images/trigger.gif" role="data" />
+   <file baseinstalldir="/" md5sum="a80bc7baabd8db4c75db1d795c40025a" name="web/images/upload-trigger.gif" role="data" />
+   <file baseinstalldir="/" md5sum="e117fca9d088e4cd5bbbcec7b99a8408" name="web/images/default/gradient-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="fc94fb0c3ed8a8f909dbc7630a0987ff" name="web/images/default/s.gif" role="data" />
+   <file baseinstalldir="/" md5sum="7ab6163237099f2529452b88953a4049" name="web/images/default/shadow-c.png" role="data" />
+   <file baseinstalldir="/" md5sum="986270d8ab4330fa7499dc33ed135598" name="web/images/default/shadow-lr.png" role="data" />
+   <file baseinstalldir="/" md5sum="860bf4f690d2ea2aba7b11500925da62" name="web/images/default/shadow.png" role="data" />
+   <file baseinstalldir="/" md5sum="86fd4c5664e0971bfc11959e8442604c" name="web/images/default/box/corners-blue.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d2d1bc2085b369ce35ffd20c0121676e" name="web/images/default/box/corners.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ced9ffbf66ea39e77083a591f8257267" name="web/images/default/box/l-blue.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c4d9dbbdc59ae06b5e9e72a6a865c981" name="web/images/default/box/l.gif" role="data" />
+   <file baseinstalldir="/" md5sum="82dbb522a80e3246f6297719371a9494" name="web/images/default/box/r-blue.gif" role="data" />
+   <file baseinstalldir="/" md5sum="bf1e1d4a45f951ae656968a8c834f04a" name="web/images/default/box/r.gif" role="data" />
+   <file baseinstalldir="/" md5sum="7c4b19eb682afdc1bde0640d2321fb25" name="web/images/default/box/tb-blue.gif" role="data" />
+   <file baseinstalldir="/" md5sum="dd3f63afe7ba90983ba73dad1c66bf2f" name="web/images/default/box/tb.gif" role="data" />
+   <file baseinstalldir="/" md5sum="44b6dbf385236a2697932a7a3e20b4a0" name="web/images/default/button/arrow.gif" role="data" />
+   <file baseinstalldir="/" md5sum="40ac871755023cc11ad15dcd77b54dbf" name="web/images/default/button/btn.gif" role="data" />
+   <file baseinstalldir="/" md5sum="5dc0252bd9ecf72f98d858427054cf08" name="web/images/default/button/group-cs.gif" role="data" />
+   <file baseinstalldir="/" md5sum="cb7813012d6be17e083835d60037029e" name="web/images/default/button/group-lr.gif" role="data" />
+   <file baseinstalldir="/" md5sum="4edf9b7db13b1331282eed298384cab9" name="web/images/default/button/group-tb.gif" role="data" />
+   <file baseinstalldir="/" md5sum="30d04f652551f1df9d59d33a99c9a320" name="web/images/default/button/s-arrow-b-noline.gif" role="data" />
+   <file baseinstalldir="/" md5sum="a957a6d618d19b92a2d1a7a1b50f5235" name="web/images/default/button/s-arrow-b.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b97877390971eaabc8113eed07f9c56e" name="web/images/default/button/s-arrow-bo.gif" role="data" />
+   <file baseinstalldir="/" md5sum="13f08a275c58135365b8e58b3177ab1a" name="web/images/default/button/s-arrow-noline.gif" role="data" />
+   <file baseinstalldir="/" md5sum="5005d8dea2f9456aaf2ab27ca7bf5651" name="web/images/default/button/s-arrow-o.gif" role="data" />
+   <file baseinstalldir="/" md5sum="bc71296ddf9c7ef5aa56b09ca3512c8a" name="web/images/default/button/s-arrow.gif" role="data" />
+   <file baseinstalldir="/" md5sum="95eb34ac70a1a3c95ef39ab826a89491" name="web/images/default/dd/drop-add.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ae536c37391ba78143b5c8283cec8d13" name="web/images/default/dd/drop-no.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f3216326c00890259e84f1726dd1043f" name="web/images/default/dd/drop-yes.gif" role="data" />
+   <file baseinstalldir="/" md5sum="a2f06caddc2fb729db5cbbd874491128" name="web/images/default/editor/tb-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="75d685cab5665a935660a3d04f71c2be" name="web/images/default/form/checkbox.gif" role="data" />
+   <file baseinstalldir="/" md5sum="97b3e5e9edf27b50d63d48098c2f1eae" name="web/images/default/form/clear-trigger.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c8c2d843458728df5c184a54862c5946" name="web/images/default/form/clear-trigger.psd" role="data" />
+   <file baseinstalldir="/" md5sum="30b5bace9f3dac358716c1415270f874" name="web/images/default/form/date-trigger.gif" role="data" />
+   <file baseinstalldir="/" md5sum="3f10ecf0d961006507d043f9b9fce45e" name="web/images/default/form/date-trigger.psd" role="data" />
+   <file baseinstalldir="/" md5sum="364474276178c7b48b6270056b42b808" name="web/images/default/form/error-tip-corners.gif" role="data" />
+   <file baseinstalldir="/" md5sum="37dbe02e3cbde0f6780650bfd8535e38" name="web/images/default/form/exclamation.gif" role="data" />
+   <file baseinstalldir="/" md5sum="0239bdaef529be68530b86266a24742c" name="web/images/default/form/radio.gif" role="data" />
+   <file baseinstalldir="/" md5sum="559ef372cf27a38678d84e8c0b7237fc" name="web/images/default/form/search-trigger.gif" role="data" />
+   <file baseinstalldir="/" md5sum="daacfb6d450b8cd56da5905db4c8b8c0" name="web/images/default/form/search-trigger.psd" role="data" />
+   <file baseinstalldir="/" md5sum="d5ba54c1f417e6a72cbce8b909078727" name="web/images/default/form/text-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d7be20f0dc38f4f46cd318fe32cf3ce3" name="web/images/default/form/trigger-tpl.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f5a8a5f21e3d7f5f0bee44be912a01a9" name="web/images/default/form/trigger.gif" role="data" />
+   <file baseinstalldir="/" md5sum="18c377883d16e6146566f084f8b205cc" name="web/images/default/form/trigger.psd" role="data" />
+   <file baseinstalldir="/" md5sum="b04e859bdcbd21ad1f06b8bfa7881df8" name="web/images/default/grid/arrow-left-white.gif" role="data" />
+   <file baseinstalldir="/" md5sum="714eb00f8134dde3a65c83f3f71ad2c4" name="web/images/default/grid/arrow-right-white.gif" role="data" />
+   <file baseinstalldir="/" md5sum="9c38bcb5cee1dc9b4ce64ad9ab1386f8" name="web/images/default/grid/col-move-bottom.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c4584202d5172464050f675d396d1c6f" name="web/images/default/grid/col-move-top.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ef35242fa6514a81d17d5f700f561b7c" name="web/images/default/grid/columns.gif" role="data" />
+   <file baseinstalldir="/" md5sum="decca3b96e2c37cf6eb04ddb0d9f669b" name="web/images/default/grid/dirty.gif" role="data" />
+   <file baseinstalldir="/" md5sum="365266930a93451414fe51ffc524a196" name="web/images/default/grid/done.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b53ca86d60fbcc7a45c8917299218bfd" name="web/images/default/grid/drop-no.gif" role="data" />
+   <file baseinstalldir="/" md5sum="af96f4c3b32a470db2f38abb521b5c97" name="web/images/default/grid/drop-yes.gif" role="data" />
+   <file baseinstalldir="/" md5sum="65ed63e44c6149f1127ad3b4be4e0108" name="web/images/default/grid/footer-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="dd35d5c1202c440c2d1a945b335984d3" name="web/images/default/grid/grid-blue-hd.gif" role="data" />
+   <file baseinstalldir="/" md5sum="0494ba49974ff2bc1bf81e1d82dfee18" name="web/images/default/grid/grid-blue-split.gif" role="data" />
+   <file baseinstalldir="/" md5sum="55972a5063d80f35fb6b95a79bb0018a" name="web/images/default/grid/grid-hrow.gif" role="data" />
+   <file baseinstalldir="/" md5sum="9ac6f737eb9b15272f12b00bfeb3c3c6" name="web/images/default/grid/grid-loading.gif" role="data" />
+   <file baseinstalldir="/" md5sum="3ef419d4b9421d8e94f673a6238dc4c0" name="web/images/default/grid/grid-split.gif" role="data" />
+   <file baseinstalldir="/" md5sum="675f403e8a9cb5ab4bed725da9fe2023" name="web/images/default/grid/grid-vista-hd.gif" role="data" />
+   <file baseinstalldir="/" md5sum="e3e77072c16a6b27556236961f29c552" name="web/images/default/grid/grid3-hd-btn.gif" role="data" />
+   <file baseinstalldir="/" md5sum="a92d8f6c106943995720f2884634670e" name="web/images/default/grid/grid3-hrow-over.gif" role="data" />
+   <file baseinstalldir="/" md5sum="3e4484ea8db10af1320808c8477346ea" name="web/images/default/grid/grid3-hrow.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c9df03a1c107360128da89fa47066405" name="web/images/default/grid/grid3-special-col-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="a94039f89dec164896ceff1fbdf6dbc5" name="web/images/default/grid/grid3-special-col-sel-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="3ff8c5936e358cf213227509c9bee95a" name="web/images/default/grid/group-by.gif" role="data" />
+   <file baseinstalldir="/" md5sum="fd6a72ffa784170d83f9f13322266ca8" name="web/images/default/grid/group-collapse.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d0f614a387292177f3acb0c95a4cd760" name="web/images/default/grid/group-expand-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="8a9ad3ed3d74c2911b7f101268a1843b" name="web/images/default/grid/group-expand.gif" role="data" />
+   <file baseinstalldir="/" md5sum="e5f27a2f68cc2d13b11cf41c46d298dc" name="web/images/default/grid/hd-pop.gif" role="data" />
+   <file baseinstalldir="/" md5sum="048e0bc30f7c39d473dad5dabcbe03f2" name="web/images/default/grid/hmenu-asc.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f0a987b34b003b25a7c82624d41f018a" name="web/images/default/grid/hmenu-desc.gif" role="data" />
+   <file baseinstalldir="/" md5sum="bcef18e25342c69c37c44dab87086065" name="web/images/default/grid/hmenu-lock.gif" role="data" />
+   <file baseinstalldir="/" md5sum="2a3b0b441834f443c1086930939efdae" name="web/images/default/grid/hmenu-lock.png" role="data" />
+   <file baseinstalldir="/" md5sum="8cc8205dafa587ef02d8a86903ae8074" name="web/images/default/grid/hmenu-unlock.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c1f61df70b98c5498ea81e7e7b9effbb" name="web/images/default/grid/hmenu-unlock.png" role="data" />
+   <file baseinstalldir="/" md5sum="04a88e97b56e8a8ece4a66d49cc78828" name="web/images/default/grid/invalid_line.gif" role="data" />
+   <file baseinstalldir="/" md5sum="00ef871b291bc03a497d608a5bd8ec99" name="web/images/default/grid/loading.gif" role="data" />
+   <file baseinstalldir="/" md5sum="37fba9c02f0eefe57f655890eef1c4a1" name="web/images/default/grid/mso-hd.gif" role="data" />
+   <file baseinstalldir="/" md5sum="23c91166dbb16ba8655363321bf5a400" name="web/images/default/grid/nowait.gif" role="data" />
+   <file baseinstalldir="/" md5sum="8d3185028c541cbcce67b5909c04824e" name="web/images/default/grid/page-first-disabled.gif" role="data" />
+   <file baseinstalldir="/" md5sum="16ec00fa770d860b768cf5034ddfca96" name="web/images/default/grid/page-first.gif" role="data" />
+   <file baseinstalldir="/" md5sum="1d123237ceeb5109a1b9274f0cf19d73" name="web/images/default/grid/page-last-disabled.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ef524dd0b8dfe4eefecffaa1c0bb8edd" name="web/images/default/grid/page-last.gif" role="data" />
+   <file baseinstalldir="/" md5sum="0f4b8681772c91921fa93ede9c755ea0" name="web/images/default/grid/page-next-disabled.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f6f9d2209dfc99912ffc9848d97646db" name="web/images/default/grid/page-next.gif" role="data" />
+   <file baseinstalldir="/" md5sum="eefcbed15c8d37a89618b08f7b224297" name="web/images/default/grid/page-prev-disabled.gif" role="data" />
+   <file baseinstalldir="/" md5sum="80daad880483eed682b22ec70514ecc4" name="web/images/default/grid/page-prev.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b431fdf306f1e2f033d0a431996de93f" name="web/images/default/grid/pick-button.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f1a2e7df30394c5a30bc76c2d09013b7" name="web/images/default/grid/refresh.gif" role="data" />
+   <file baseinstalldir="/" md5sum="2d0aa7e501c3e6f97a97faf75e35d3c3" name="web/images/default/grid/row-check-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="be81199d9d4fa69bef47a8f036a5a7d8" name="web/images/default/grid/row-expand-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f639094bd0560aefabc86e51a825f23d" name="web/images/default/grid/row-over.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ca87d6b950386edd5e17c985769d9101" name="web/images/default/grid/row-sel.gif" role="data" />
+   <file baseinstalldir="/" md5sum="2640addef6e987b4c5dfa4c8c2dfb10c" name="web/images/default/grid/sort-hd.gif" role="data" />
+   <file baseinstalldir="/" md5sum="2352874b5f636ca331fe9509a2f9bdd7" name="web/images/default/grid/sort_asc.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d104fcf119d40c51554ddb8b377142e5" name="web/images/default/grid/sort_desc.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c3affff39ba36b80da43a08c34a61391" name="web/images/default/grid/Thumbs.db" role="data" />
+   <file baseinstalldir="/" md5sum="b0cd5a5dc070c705ebf8814a909802c3" name="web/images/default/grid/wait.gif" role="data" />
+   <file baseinstalldir="/" md5sum="dfcec0803d488a783916c750fd83a897" name="web/images/default/layout/collapse.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c9c9b0ea5311c3dc016c69dc234912bc" name="web/images/default/layout/expand.gif" role="data" />
+   <file baseinstalldir="/" md5sum="e117fca9d088e4cd5bbbcec7b99a8408" name="web/images/default/layout/gradient-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ae8e3674fd32997dc5217d5d6199a5a5" name="web/images/default/layout/mini-bottom.gif" role="data" />
+   <file baseinstalldir="/" md5sum="8654fdb45ecf4406af2fce1d3beb7596" name="web/images/default/layout/mini-left.gif" role="data" />
+   <file baseinstalldir="/" md5sum="cbdf9fb0c45466b4217ac9f7bd6a9ed4" name="web/images/default/layout/mini-right.gif" role="data" />
+   <file baseinstalldir="/" md5sum="fbd91e98576f66fd2702495251b15240" name="web/images/default/layout/mini-top.gif" role="data" />
+   <file baseinstalldir="/" md5sum="efa9fbd7a1f3f0f1f22360391e16126f" name="web/images/default/layout/ns-collapse.gif" role="data" />
+   <file baseinstalldir="/" md5sum="da1f9d40c091d3b6dc7a8dee4fc02ac6" name="web/images/default/layout/ns-expand.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b185da1837344529bfb684a96d8371b5" name="web/images/default/layout/panel-close.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b66384c309a397963389a76b07e9ecd4" name="web/images/default/layout/panel-title-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="688d3a263442db125da170e5d3aebf70" name="web/images/default/layout/panel-title-light-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="be9e67ae0b61b01cfd15928ca7a3da51" name="web/images/default/layout/stick.gif" role="data" />
+   <file baseinstalldir="/" md5sum="745e0cacb51250ea0216efc4a1cb50cb" name="web/images/default/layout/stuck.gif" role="data" />
+   <file baseinstalldir="/" md5sum="0ae2c978e85391a69f0dce8da18d8b23" name="web/images/default/layout/tab-close-on.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f92107cc6b4cb78af084648a628e01d2" name="web/images/default/layout/tab-close.gif" role="data" />
+   <file baseinstalldir="/" md5sum="cb7b3408df56f5585aaa1242cd2f0b45" name="web/images/default/menu/checked.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f7973443d91e5e074013f1b07ee79479" name="web/images/default/menu/group-checked.gif" role="data" />
+   <file baseinstalldir="/" md5sum="bb4cdc0ea257834cd5ed01f883387d8f" name="web/images/default/menu/item-over.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d303ad7e3ced891736e80f77e1d4e51d" name="web/images/default/menu/menu-parent.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ae128d5f3f3a39213f3d4e23aec8728f" name="web/images/default/menu/menu.gif" role="data" />
+   <file baseinstalldir="/" md5sum="31846118bddc7945b595ea2090589cf1" name="web/images/default/menu/unchecked.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d4546c86ed835fee767212279ee98b68" name="web/images/default/panel/corners-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="6553647bad54d83e2c235f339d12f6be" name="web/images/default/panel/left-right.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b058affcc8b3e8a03be74bc9d9697da7" name="web/images/default/panel/light-hd.gif" role="data" />
+   <file baseinstalldir="/" md5sum="e0449768cd5dce80b18fac904818ab33" name="web/images/default/panel/tool-sprite-tpl.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c2ac6edef318ed18a0efcc9c74c7a81b" name="web/images/default/panel/tool-sprites.gif" role="data" />
+   <file baseinstalldir="/" md5sum="8331513f15bd26be38974a7d7fc4ee41" name="web/images/default/panel/tools-sprites-trans.gif" role="data" />
+   <file baseinstalldir="/" md5sum="a4854e1b3aea60123522cb687a462c05" name="web/images/default/panel/top-bottom.gif" role="data" />
+   <file baseinstalldir="/" md5sum="2a65a27def756a0951644b511f6f2cce" name="web/images/default/panel/top-bottom.png" role="data" />
+   <file baseinstalldir="/" md5sum="81f089d0247ca1ad12093be21884d773" name="web/images/default/panel/white-corners-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="77a6389c6737ad507ca5330ad8816524" name="web/images/default/panel/white-left-right.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f865d7237bff3c45fd4a8c448f97d236" name="web/images/default/panel/white-top-bottom.gif" role="data" />
+   <file baseinstalldir="/" md5sum="fd75abcd9d1cb8534f24f438a71e6fd8" name="web/images/default/progress/progress-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="49c0a530cc16357bb39d51c13065a88f" name="web/images/default/qtip/bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="0379d036250096cae2e42b427b3df2e7" name="web/images/default/qtip/close.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f39bc3283b69431ce6e7aed2fe6882b9" name="web/images/default/qtip/tip-anchor-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="090b2d83952e682fab43b2ab16be2991" name="web/images/default/qtip/tip-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="dc2fd7c0ed853c56b4ac65710af3bd0a" name="web/images/default/shared/blue-loading.gif" role="data" />
+   <file baseinstalldir="/" md5sum="81296cff1f97f5365524f2b9dcf626da" name="web/images/default/shared/calendar.gif" role="data" />
+   <file baseinstalldir="/" md5sum="bc2cd5c5ac9b3874d956c892d23f2119" name="web/images/default/shared/glass-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="6a54ae98bef53397d52282201852c204" name="web/images/default/shared/hd-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d96f6517e00399c37a9765e045eaaf22" name="web/images/default/shared/large-loading.gif" role="data" />
+   <file baseinstalldir="/" md5sum="6bf30c6cf0b5d70436c3e463b5532b35" name="web/images/default/shared/left-btn.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ac062b94ed674aaa50a6c18df92acdf3" name="web/images/default/shared/loading-balls.gif" role="data" />
+   <file baseinstalldir="/" md5sum="e7ad3a7f4814791cecf1b90e77e9e139" name="web/images/default/shared/right-btn.gif" role="data" />
+   <file baseinstalldir="/" md5sum="448dc934a7f0dd6092b51f88a1e47b2d" name="web/images/default/shared/warning.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b86289f41d7ad1a7401dd2b2a9b3c3d8" name="web/images/default/sizer/e-handle-dark.gif" role="data" />
+   <file baseinstalldir="/" md5sum="510edc95ebaa36306916c50ca10596f7" name="web/images/default/sizer/e-handle.gif" role="data" />
+   <file baseinstalldir="/" md5sum="115f71b851c7f0b5f354caa7b8dfff15" name="web/images/default/sizer/ne-handle-dark.gif" role="data" />
+   <file baseinstalldir="/" md5sum="8e268b962dc909d275997b572ff17a72" name="web/images/default/sizer/ne-handle.gif" role="data" />
+   <file baseinstalldir="/" md5sum="4a361e6920b2e34a39fd425a515c83b9" name="web/images/default/sizer/nw-handle-dark.gif" role="data" />
+   <file baseinstalldir="/" md5sum="1120600505249c38c3d1cc2ab120cd13" name="web/images/default/sizer/nw-handle.gif" role="data" />
+   <file baseinstalldir="/" md5sum="4a6bf15d308a4ae580dd03cbd431a95c" name="web/images/default/sizer/s-handle-dark.gif" role="data" />
+   <file baseinstalldir="/" md5sum="5e3338cb09e9df7f52383d6b1423fc86" name="web/images/default/sizer/s-handle.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f3d8d8aac23e3e9633072e2366cda847" name="web/images/default/sizer/se-handle-dark.gif" role="data" />
+   <file baseinstalldir="/" md5sum="71edc3f63f79f447d2c81ee09e1fbbc3" name="web/images/default/sizer/se-handle.gif" role="data" />
+   <file baseinstalldir="/" md5sum="4431ea1954bfd2a9cea0931f07fc7ffa" name="web/images/default/sizer/square.gif" role="data" />
+   <file baseinstalldir="/" md5sum="44b2400d873cf8a23d84424827cde44d" name="web/images/default/sizer/sw-handle-dark.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c3e0befc4208a51180344765fd7deeda" name="web/images/default/sizer/sw-handle.gif" role="data" />
+   <file baseinstalldir="/" md5sum="0903ad3af985419767a60a5b025e0a18" name="web/images/default/slider/slider-bg.png" role="data" />
+   <file baseinstalldir="/" md5sum="24a893c9606f3a6892eb62f29a08870c" name="web/images/default/slider/slider-thumb.png" role="data" />
+   <file baseinstalldir="/" md5sum="0682c28925a7296730f7f221e4a76b96" name="web/images/default/slider/slider-v-bg.png" role="data" />
+   <file baseinstalldir="/" md5sum="2fc3430dc351d9a118e048b9aafb7c3c" name="web/images/default/slider/slider-v-thumb.png" role="data" />
+   <file baseinstalldir="/" md5sum="f1ce5158650880e9fe256e739f60dd23" name="web/images/default/tabs/scroll-left.gif" role="data" />
+   <file baseinstalldir="/" md5sum="905ea778cb64c74ef3cd49ae4fa64b71" name="web/images/default/tabs/scroll-right.gif" role="data" />
+   <file baseinstalldir="/" md5sum="43457068d919fadd0e959542cfd81ad2" name="web/images/default/tabs/scroller-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ed19092d440c5bfbdc864f714f26ee03" name="web/images/default/tabs/tab-btm-inactive-left-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c3f340dc9f7f9398e1395f351e706dfd" name="web/images/default/tabs/tab-btm-inactive-right-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="dfe63a170d5391d56645dbfed27b5d22" name="web/images/default/tabs/tab-btm-left-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="768ac4e5531974feda076cbca7a5cb6e" name="web/images/default/tabs/tab-btm-right-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="59304a56f5e0f506bf671aeafb8fc767" name="web/images/default/tabs/tab-close.gif" role="data" />
+   <file baseinstalldir="/" md5sum="5b1b94e9669aaab4e76e5aba8bf8ec1d" name="web/images/default/tabs/tab-strip-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d99e3b7b2610f3c85aa943fe139e6afa" name="web/images/default/tabs/tab-strip-bg.png" role="data" />
+   <file baseinstalldir="/" md5sum="f76eec7881fcc7a0f76354d184e0087e" name="web/images/default/tabs/tab-strip-btm-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="2562a17ad0076bdd3711d18e62f74c27" name="web/images/default/tabs/tabs-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b795052041aa76a42466b3be5575077f" name="web/images/default/toolbar/bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="fa49b39a0fd88ef26264da44a2b4edea" name="web/images/default/toolbar/btn-arrow-light.gif" role="data" />
+   <file baseinstalldir="/" md5sum="12bda29a4c8016cfa047e852c4353f59" name="web/images/default/toolbar/btn-arrow.gif" role="data" />
+   <file baseinstalldir="/" md5sum="faddf9b24cefa721326ba3f87f3ef31f" name="web/images/default/toolbar/btn-over-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="cf2d9408f320e696e607d8472afa7ff0" name="web/images/default/toolbar/gray-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="15c7a30d4131305b672fe1e76d962d4d" name="web/images/default/toolbar/more.gif" role="data" />
+   <file baseinstalldir="/" md5sum="5309337fd7a22cab9d9467fd9eaa0a0c" name="web/images/default/toolbar/tb-bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ba0a5d77db72942782fc4bf23f710738" name="web/images/default/toolbar/tb-btn-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="3ffd5589b41889230755ea2108cc0e92" name="web/images/default/toolbar/tb-xl-btn-sprite.gif" role="data" />
+   <file baseinstalldir="/" md5sum="06e026387e2dd0f49e88a04791cf26fa" name="web/images/default/toolbar/tb-xl-sep.gif" role="data" />
+   <file baseinstalldir="/" md5sum="1ed43ea06dfbba89c06f6c6fc372ace0" name="web/images/default/tree/arrows.gif" role="data" />
+   <file baseinstalldir="/" md5sum="95eb34ac70a1a3c95ef39ab826a89491" name="web/images/default/tree/drop-add.gif" role="data" />
+   <file baseinstalldir="/" md5sum="edb544a0de58547d4a39c526e06e3c82" name="web/images/default/tree/drop-between.gif" role="data" />
+   <file baseinstalldir="/" md5sum="67f83ea04a2eb1c50614a96faf625f25" name="web/images/default/tree/drop-no.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d6b303cfa3de8784057d9d7e66cdaa86" name="web/images/default/tree/drop-over.gif" role="data" />
+   <file baseinstalldir="/" md5sum="55e5dbc9451cfa91423832260b0753aa" name="web/images/default/tree/drop-under.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f3216326c00890259e84f1726dd1043f" name="web/images/default/tree/drop-yes.gif" role="data" />
+   <file baseinstalldir="/" md5sum="5e5bffba157eceee7989db95b919e4d5" name="web/images/default/tree/elbow-end-minus-nl.gif" role="data" />
+   <file baseinstalldir="/" md5sum="a469f6a4394d797c2efeffc70409f6db" name="web/images/default/tree/elbow-end-minus.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f0f50c0dd3ee6dd4b11c1f245b36eb01" name="web/images/default/tree/elbow-end-plus-nl.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ec1482391363612d9e5f8c7087fddaba" name="web/images/default/tree/elbow-end-plus.gif" role="data" />
+   <file baseinstalldir="/" md5sum="345551384aa325189ba28a1c20f3405e" name="web/images/default/tree/elbow-end.gif" role="data" />
+   <file baseinstalldir="/" md5sum="90e478158df476dc989a60daaafc87e6" name="web/images/default/tree/elbow-line.gif" role="data" />
+   <file baseinstalldir="/" md5sum="5e5bffba157eceee7989db95b919e4d5" name="web/images/default/tree/elbow-minus-nl.gif" role="data" />
+   <file baseinstalldir="/" md5sum="71bb1bd44b1274c60d30dba1de472ed7" name="web/images/default/tree/elbow-minus.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f0f50c0dd3ee6dd4b11c1f245b36eb01" name="web/images/default/tree/elbow-plus-nl.gif" role="data" />
+   <file baseinstalldir="/" md5sum="945572d06a74b5f952251a86c595f2da" name="web/images/default/tree/elbow-plus.gif" role="data" />
+   <file baseinstalldir="/" md5sum="27679f3b1222ba95d9925885d7d82d02" name="web/images/default/tree/elbow.gif" role="data" />
+   <file baseinstalldir="/" md5sum="c569141d6ae7c61d838ed8af26aa9380" name="web/images/default/tree/folder-open.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b7209740bb4a825a06beb8698d92c2b1" name="web/images/default/tree/folder.gif" role="data" />
+   <file baseinstalldir="/" md5sum="23757d6e353f343e3c7edfe28428f198" name="web/images/default/tree/leaf.gif" role="data" />
+   <file baseinstalldir="/" md5sum="00ef871b291bc03a497d608a5bd8ec99" name="web/images/default/tree/loading.gif" role="data" />
+   <file baseinstalldir="/" md5sum="fc94fb0c3ed8a8f909dbc7630a0987ff" name="web/images/default/tree/s.gif" role="data" />
+   <file baseinstalldir="/" md5sum="f477b54b6b8361362e96c2218dce7ea0" name="web/images/default/window/icon-error.gif" role="data" />
+   <file baseinstalldir="/" md5sum="ec6b7a5d4caeea767c8674689bae47c6" name="web/images/default/window/icon-info.gif" role="data" />
+   <file baseinstalldir="/" md5sum="2713644a8aa582728d71e35eca62fbcd" name="web/images/default/window/icon-question.gif" role="data" />
+   <file baseinstalldir="/" md5sum="3f20258272af0e00f6b7531b3b9aee35" name="web/images/default/window/icon-warning.gif" role="data" />
+   <file baseinstalldir="/" md5sum="1d8a9cdb663e292ab70def47094dc528" name="web/images/default/window/left-corners.png" role="data" />
+   <file baseinstalldir="/" md5sum="18618115985e5905c7a6345c3ef0255a" name="web/images/default/window/left-corners.psd" role="data" />
+   <file baseinstalldir="/" md5sum="d65dd5318f003143927bc0d7c5ff6e2f" name="web/images/default/window/left-right.png" role="data" />
+   <file baseinstalldir="/" md5sum="029c8ba62b77e910b07764e324c32a84" name="web/images/default/window/left-right.psd" role="data" />
+   <file baseinstalldir="/" md5sum="e7c4dad6996685750acfba2f4e29115a" name="web/images/default/window/right-corners.png" role="data" />
+   <file baseinstalldir="/" md5sum="51aea4dd6bbdedf7923342e43bacbb7a" name="web/images/default/window/right-corners.psd" role="data" />
+   <file baseinstalldir="/" md5sum="4f1e86207b228c192c2e243f77854adb" name="web/images/default/window/top-bottom.png" role="data" />
+   <file baseinstalldir="/" md5sum="826ca83fb9892be49f1b1aaaf61fd6c4" name="web/images/default/window/top-bottom.psd" role="data" />
+   <file baseinstalldir="/" md5sum="87b7eee501232f65cc27db5c5dd4694a" name="web/images/gridFilter/equals.png" role="data" />
+   <file baseinstalldir="/" md5sum="9f1ca0cb69861e19aacb41d097adc081" name="web/images/gridFilter/find.png" role="data" />
+   <file baseinstalldir="/" md5sum="746cb720e5e18bd8c52c1dbfeaaa4cef" name="web/images/gridFilter/greater_then.png" role="data" />
+   <file baseinstalldir="/" md5sum="2bbe16dd9c02c873646d48679bd30ba2" name="web/images/gridFilter/gridFilter.css" role="data" />
+   <file baseinstalldir="/" md5sum="8ba938eb0bf731b42ef1cc55617bbb78" name="web/images/gridFilter/hd-btn.gif" role="data" />
+   <file baseinstalldir="/" md5sum="b131e1f11c043a00c5542ebfa07200b9" name="web/images/gridFilter/hd-btn.png" role="data" />
+   <file baseinstalldir="/" md5sum="20822cab2ab95e364cc7b93c19ebb870" name="web/images/gridFilter/header_bg.gif" role="data" />
+   <file baseinstalldir="/" md5sum="1fc29cbad400f6b0165f8f1a5230117a" name="web/images/gridFilter/header_bg.png" role="data" />
+   <file baseinstalldir="/" md5sum="2fb7416c89137c90bd94798dd598da05" name="web/images/gridFilter/less_then.png" role="data" />
+   <file baseinstalldir="/" md5sum="9e7aa77783ea8aa38075d1385b3fa059" name="web/images/gridFilter/sort_filtered_asc.gif" role="data" />
+   <file baseinstalldir="/" md5sum="6d594504e046c5f2bdad39263dcd3656" name="web/images/gridFilter/sort_filtered_desc.gif" role="data" />
+   <file baseinstalldir="/" md5sum="d5569ad5018594e56bdbbbd30d30c477" name="web/js/ext-all-debug.js" role="data" />
+   <file baseinstalldir="/" md5sum="3e80602f3d5e7af4c8f6cf9b00a060ec" name="web/js/ext-all.js" role="data" />
+   <file baseinstalldir="/" md5sum="d4535f5f0c4e7aa64a2f8fcfcf08eaff" name="web/js/ext-base-debug.js" role="data" />
+   <file baseinstalldir="/" md5sum="5324a796cb5cb7ab8af197d8e53ed1f4" name="web/js/ext-base.js" role="data" />
+   <file baseinstalldir="/" md5sum="1d339733121af3c9ab388600d41ff0cb" name="web/js/ext-lang-fr.js" role="data" />
+   <file baseinstalldir="/" md5sum="9df64e331f6756b23a8a9faa6e0b78ef" name="web/js/fieldSetWithCheckbox.js" role="data" />
+   <file baseinstalldir="/" md5sum="bc57a33dc7b093c0ce66ef4358628539" name="web/js/plug.js" role="data" />
+   <file baseinstalldir="/" md5sum="508a4f70ef2aef4a8c9b501b0a1bb9ee" name="web/js/submitbutton.js" role="data" />
+   <file baseinstalldir="/" md5sum="5fbd350710589d42be1cd7d48b264011" name="web/js/ux/fileUploadField.js" role="data" />
+   <file baseinstalldir="/" md5sum="5bbbb6ff1d5ea13290f79742118c46bb" name="web/js/ux/PagingStore.js" role="data" />
+   <file baseinstalldir="/" md5sum="5735f6724dc22dbc9eb921286742843d" name="web/js/ux/RowExpander.js" role="data" />
+   <file baseinstalldir="/" md5sum="567a27394348c06ea3fa327886dfc32f" name="web/js/ux/statePagingToolbar.js" role="data" />
+   <file baseinstalldir="/" md5sum="bc2f0a7b6220a462b00277c6b790a8e7" name="web/js/ux/grid/GridFilters.js" role="data" />
+   <file baseinstalldir="/" md5sum="3cc9617982826530bf8d43630e8b5ebc" name="web/js/ux/grid/filter/BooleanFilter.js" role="data" />
+   <file baseinstalldir="/" md5sum="9e9fffd1c7ed092613be840af78cca67" name="web/js/ux/grid/filter/DateFilter.js" role="data" />
+   <file baseinstalldir="/" md5sum="1b055eedcde329c4a4a553701a6f2074" name="web/js/ux/grid/filter/Filter.js" role="data" />
+   <file baseinstalldir="/" md5sum="9b5c819a0f7eacb8dcd14c5916ea5a13" name="web/js/ux/grid/filter/ListFilter.js" role="data" />
+   <file baseinstalldir="/" md5sum="1811ea330d2c173d7176f86bb8cc514e" name="web/js/ux/grid/filter/NumericFilter.js" role="data" />
+   <file baseinstalldir="/" md5sum="615b290cc6a9ea751abd0878bb0fae68" name="web/js/ux/grid/filter/StringFilter.js" role="data" />
+   <file baseinstalldir="/" md5sum="f9cf2b3f5f9b19e87a9bcee27d53c298" name="web/js/ux/menu/EditableItem.js" role="data" />
+   <file baseinstalldir="/" md5sum="95170d67c3bb21f59cb779cb93429ee7" name="web/js/ux/menu/ListMenu.js" role="data" />
+   <file baseinstalldir="/" md5sum="276e558fbe3d35beb0ff2796e95f2ce7" name="web/js/ux/menu/RangeMenu.js" role="data" />
+   <file baseinstalldir="/" md5sum="6bfbbc5115eddbeb4df99c32fbe68e2f" name="web/js/ux/menu/TreeMenu.js" role="data" />
+   <file baseinstalldir="/" md5sum="b52f2d57d10c4f7ee67a7eb9615d5d24" name="LICENSE" role="data" />
+   <file baseinstalldir="/" md5sum="e5c4998cac91a7bb0ce3a96e69000510" name="README" role="data" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.4</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.2.0</min>
+    <max>1.3.0</max>
+    <exclude>1.3.0</exclude>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-10-02</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>-</notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-10-02</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+Minor modification in README
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-10-26</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+- add PluginExt3TextArea
+- add PluginExt3MultiSelect
+- change README
+- JS refactoring &apos;PlugTMP&apos; -&gt; &apos;atolExt3WidgetPlugin&apos;
+   </notes>
+  </release>
+ </changelog>
+</package>
