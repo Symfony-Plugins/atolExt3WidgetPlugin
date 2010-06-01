@@ -1,0 +1,82 @@
+/*
+.x-grid3-hd-row .ux-filtered-column {
+  border-left: 1px solid #C7E3B4;
+  border-right: 1px solid #C7E3B4;
+}
+*/
+
+.x-grid3-hd.ux-filtered-column {
+  background-color: #026798;
+  background-image: url(../images/gridFilter/header_bg.png);
+  background-position: 0 0px;
+  background-repeat: repeat-x; 
+}
+
+/*
+.ux-filtered-column.sort-asc .x-grid3-sort-icon {
+	background-image: url(../images/gridFilter/sort_filtered_asc.gif);
+}
+
+.ux-filtered-column.sort-desc .x-grid3-sort-icon {
+	background-image: url(../images/gridFilter/sort_filtered_desc.gif);
+}
+*/
+.ux-gridfilter-text-icon {
+  background-image: url(../images/gridFilter/find.png);
+}
+
+/**
+ * RangeMenu.js Styles
+ **/
+.ux-rangemenu-gt {
+  background-image: url(../images/gridFilter/greater_then.png);
+}
+
+.ux-rangemenu-lt {
+  background-image: url(../images/gridFilter/less_then.png);
+}
+
+.ux-rangemenu-eq {
+  background-image: url(../images/gridFilter/equals.png);
+}
+
+/**
+ * TreeMenu.js Styles
+ */
+.ux-tree-menu {
+  background-image: none;
+}
+
+.ux-tree-menu-wrap {
+  position: relative;
+  overflow: auto;
+}
+
+.ux-tree-menu-search-icon {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: url(../images/gridFilter/find.png) top left no-repeat;
+}
+
+.ux-tree-menu-search {
+  padding-left: 19px;
+}
+
+img.ux-gridfilter-text-icon,img.ux-rangemenu-gt,img.ux-rangemenu-lt,img.ux-rangemenu-eq
+  {
+  top: 3px;
+  left: 5px;
+  position: relative;
+  margin-right: 10px;
+}
+
+li.x-menu-list-item div {
+  display: inline;
+}
+
+li.x-menu-list-item-indent {
+  padding: 0px;
+}
